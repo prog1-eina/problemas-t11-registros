@@ -1,7 +1,7 @@
 ﻿/********************************************************************************\
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Miguel Ángel Latre
- * Última revisión: 14 de noviembre de 2018
+ * Última revisión: 21 de noviembre de 2019
  * Resumen: Soluciones a los problemas de Programación 1 planteados en la clase
  *          de problemas de registros.
  * Codificación de caracteres original de este fichero: UTF-8 con BOM
@@ -20,7 +20,7 @@ const int MAX_NUM_MOVIMIENTOS = 200;
 /*
  * Tiempo en meses durante el que a un conductor se le considera novel.
  */
-const int MESES_NOVEL = 24;
+const int MESES_NOVEL = 12;
 
 
 /*
@@ -32,7 +32,7 @@ const int MESES_NOVEL = 24;
 struct Permiso {
     char nombreCompleto[MAX_LONG_NOMBRE];
     int antiguedadMeses;
-    int movimientosPuntos[MAX_NUM_MOVIMIENTOS];
+    int movimientos[MAX_NUM_MOVIMIENTOS];
     int numMovimientos;
     // Aquí iría la definición de campos para otra información como
     // DNI, fecha de expedición, tipo de carnet, ...
@@ -41,11 +41,10 @@ struct Permiso {
 
 /*
  * Pre:  La cadena «nombre» no tiene más de MAX_LONG_NOMBRE caracteres.
- * Post: Ha inicializado el permiso «conductorNovel» de forma que representa el
- *       permiso de conducir de una persona llamada «nombre» que acaba de
- *       obtenerlo.
+ * Post: Ha inicializado el permiso «p» de forma que representa el permiso de
+ *       conducir de una persona llamada «nombre» que acaba de obtenerlo.
  */
-void inicializarComoNovel(Permiso& conductorNovel, const char nombre[]);
+void inicializarComoNuevo(Permiso& p, const char nombre[]);
 
 /*
  * Pre:  ---

@@ -1,7 +1,7 @@
 ﻿/********************************************************************************\
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Miguel Ángel Latre
- * Última revisión: 21 de noviembre de 2018
+ * Última revisión: 21 de noviembre de 2019
  * Resumen: Soluciones a los problemas de Programación 1 planteados en la clase
  *          de problemas de registros.
  * Codificación de caracteres original de este fichero: UTF-8 con BOM
@@ -21,15 +21,14 @@ const int PUNTOS_NOVEL = 8;
 
 /*
  * Pre:  La cadena «nombre» no tiene más de MAX_LONG_NOMBRE caracteres.
- * Post: Ha inicializado el permiso «conductorNovel» de forma que representa el
- *       permiso de conducir de una persona llamada «nombre» que acaba de
- *       obtenerlo.
+ * Post: Ha inicializado el permiso «p» de forma que representa el permiso de
+ *       conducir de una persona llamada «nombre» que acaba de obtenerlo.
  */
-void inicializarComoNovel(Permiso& conductorNovel, const char nombre[]) {
-    strcpy(conductorNovel.nombreCompleto, nombre);
-    conductorNovel.antiguedadMeses = 0;
-    conductorNovel.movimientosPuntos[0] = PUNTOS_NOVEL;
-    conductorNovel.numMovimientos = 1;
+void inicializarComoNuevo(Permiso& p, const char nombre[]) {
+    strcpy(p.nombreCompleto, nombre);
+    p.antiguedadMeses = 0;
+    p.movimientos[0] = PUNTOS_NOVEL;
+    p.numMovimientos = 1;
 }
 
 
@@ -49,7 +48,7 @@ bool esNovel(const Permiso& p) {
 int puntos(const Permiso& p) {
     int resultado = 0;
     for (int i = 0; i < p.numMovimientos; i++) {
-        resultado += p.movimientosPuntos[i];
+        resultado += p.movimientos[i];
     }
     return resultado;
 }
@@ -63,7 +62,7 @@ int puntos(const Permiso& p) {
  */
 void registrarSancion(Permiso& p, const int sancion) {
     if (p.numMovimientos < MAX_NUM_MOVIMIENTOS) {
-        p.movimientosPuntos[p.numMovimientos] = -sancion;
+        p.movimientos[p.numMovimientos] = -sancion;
         p.numMovimientos++;
     }
 }
@@ -83,7 +82,7 @@ void registrarBonificacion(Permiso& p, const int bonificacion) {
         if (puntosActuales + bonificacion > PUNTOS_MAXIMO_LEGAL) {
             puntosARegistrar = PUNTOS_MAXIMO_LEGAL - puntosActuales;
         }
-        p.movimientosPuntos[p.numMovimientos] = puntosARegistrar;
+        p.movimientos[p.numMovimientos] = puntosARegistrar;
         p.numMovimientos++;
     }
 }

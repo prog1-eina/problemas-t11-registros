@@ -34,7 +34,7 @@ void mostrar(const Permiso& permiso) {
 int main() {
     cout << "Se saca el carnet: ";
     Permiso permiso;
-    inicializarComoNovel(permiso, "Juan Glez Glez");
+    inicializarComoNuevo(permiso, "Juan Glez Glez");
     mostrar(permiso);
 
     cout << "Han pasado dos años: ";
