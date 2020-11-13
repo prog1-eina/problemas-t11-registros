@@ -11,10 +11,10 @@ El código está estructurado en dos directorios (`permisos-conducir` y
 `racionales`), aunque las reglas de compilación están en un único fichero
 `Makefile`.
 
-El proyecto `racionales` necesita del módulo `calculos` de la práctica 3 para
+El programa `racionales` necesita del módulo `calculos` de la práctica 3 para
 reutilizar las funciones mcd y mcm. El fichero `Makefile` ha sido escrito
 considerando que dicho módulo se encuentra en un directorio denominado
 `calculadora/src` dentro de un directorio `practica3` ubicado en la misma
 carpeta que el directorio correspondiente a estas soluciones
-(`problemas-t11-registros`). La ruta a este módulo pueden modificarse en el
+(`problemas-t11-registros`). La ruta a este módulo puede modificarse en el
 propio fichero `Makefile` si fuese preciso.
