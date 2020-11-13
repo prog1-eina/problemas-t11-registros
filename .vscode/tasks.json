@@ -1,0 +1,34 @@
+{
+    "tasks": [
+        {
+            "label": "Compilar programa «permisos»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make.exe",
+            },
+            "args": [
+                "permisos"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+        },
+        {
+            "label": "Ejecutar programa «permisos»",
+            "type": "shell",
+            "command": "bin/permisos",
+            "windows": {
+                "command": "chcp 65001 ; bin\\permisos.exe",
+            },
+            "dependsOn": "Compilar programa «permisos»",
+            "problemMatcher": ["$gcc"],
+        },
+    ],
+    "presentation": {
+        "showReuseMessage": false,
+        "panel": "shared",
+        "reveal": "always",
+        "focus": true,
+    },
+    "version": "2.0.0"
+}
