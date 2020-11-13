@@ -1,7 +1,7 @@
 ﻿/********************************************************************************\
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 15 de noviembre de 2018
+ * Última revisión: 13 de noviembre de 2020
  * Resumen: Soluciones a los problemas de Programación 1 planteados en la clase
  *          de problemas de registros.
  * Codificación de caracteres original de este fichero: UTF-8 con BOM
@@ -14,31 +14,29 @@ using namespace std;
 
 
 /*
- * Pre:  r.denominador ≠ 0
- * Post: Ha devuelto el racional representante canónico del conjunto de racionales
- *       equivalentes al valor de «r».
- */
-Racional reducir(const Racional r) {
-    int maximoComunDivisor = mcd(r.denominador, r.numerador);
-    Racional irreducible;
-    irreducible.numerador = r.numerador / maximoComunDivisor;
-    irreducible.denominador = r.denominador / maximoComunDivisor;
-    if (irreducible.denominador < 0) {
-        irreducible.numerador = -irreducible.numerador;
-        irreducible.denominador = -irreducible.denominador;
-    }
-    return irreducible;
-}
-
-
-/*
  * Pre:  denominador ≠ 0
- * Post: Ha devuelto un registro de tipo «Racional» cuyo valor es el representante
- *       canónico de numerador∕denominador.
+ * Post: Ha devuelto un registro de tipo «Racional» cuyo valor es el 
+ *       representante canónico de numerador∕denominador.
  */
 Racional definirRacional(const int numerador, const int denominador) {
-    Racional r = {numerador, denominador};
-    return reducir(r);
+    int maximoComunDivisor = mcd(denominador, numerador);
+        // Tenemos que declarar la variable «maximoComunDivisor» de tipo «int»
+        // para que las divisiones de las dos instrucciones siguientes se hagan
+        // entre enteros con singo. Si la declaramos como «unsigned int», serían
+        // los valores de «numerador» y «denominador» los que se convertirían
+        // implicitamente a enteros sin signo para hacer las divisiones, lo que
+        // produciría resultados erróneos en el caso de que uno de los dos tenga
+        // un valor negativo.
+        // https://en.cppreference.com/w/cpp/language/operator_arithmetic#Conversions
+        
+    int numeradorIrreducible = numerador / maximoComunDivisor;
+    int denominadorIrreducible = denominador / maximoComunDivisor;
+    if (denominadorIrreducible >= 0) {
+        return {numeradorIrreducible, unsigned(denominadorIrreducible)};
+    }
+    else {
+        return {-numeradorIrreducible, unsigned(-denominadorIrreducible)};
+    }
 }
 
 
@@ -78,9 +76,8 @@ Racional opuesto(const Racional a) {
  * Post: Ha devuelto a x b.
  */
 Racional multiplicar(const Racional a, const Racional b) {
-    Racional producto = {a.numerador * b.numerador,
-                         a.denominador * b.denominador};
-    return reducir(producto);
+    return definirRacional(a.numerador * b.numerador,
+                           a.denominador * b.denominador);
 }
 
 
@@ -98,8 +95,12 @@ Racional dividir(const Racional a, const Racional b) {
  * Post: Ha devuelto 1∕a
  */
 Racional inverso(const Racional a) {
-    Racional reciproco = {a.denominador, a.numerador};
-    return reciproco;
+    if (a.numerador > 0) {
+        return {int(a.denominador), unsigned(a.numerador)};
+    }
+    else {
+        return {int(-a.denominador), unsigned(-a.numerador)};
+    }
 }
 
 

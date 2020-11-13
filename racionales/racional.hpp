@@ -1,25 +1,25 @@
-﻿/********************************************************************************\
+﻿/******************************************************************************\
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 15 de noviembre de 2018
+ * Última revisión: 13 de noviembre de 2020
  * Resumen: Soluciones a los problemas de Programación 1 planteados en la clase
  *          de problemas de registros.
- * Codificación de caracteres original de este fichero: UTF-8 con BOM
-\********************************************************************************/
+\******************************************************************************/
 
 
 /*
  * Representación de números racionales canónicos.
  */
 struct Racional {
-    int numerador, denominador;
+    int numerador;
+    unsigned int denominador;
 };
 
 
 /*
  * Pre:  denominador ≠ 0
- * Post: Ha devuelto un registro de tipo «Racional» cuyo valor es el representante
- *       canónico de numerador∕denominador.
+ * Post: Ha devuelto un registro de tipo «Racional» cuyo valor es el 
+ *       representante canónico de numerador∕denominador.
  */
 Racional definirRacional(const int numerador, const int denominador);
 
