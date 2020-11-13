@@ -8,8 +8,8 @@
 \********************************************************************************/
 
 #include <iostream>
-#include "racional.h"
-#include "calculos.h"
+#include "racional.hpp"
+#include "calculos.hpp"
 using namespace std;
 
 

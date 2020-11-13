@@ -8,7 +8,7 @@
 \********************************************************************************/
 
 #include <iostream>
-#include "racional.h"
+#include "racional.hpp"
 
 /*
  * Pre:  ---

@@ -7,7 +7,7 @@
  * Codificación de caracteres original de este fichero: UTF-8 con BOM
 \********************************************************************************/
 #include <cstring>
-#include "permiso.h"
+#include "permiso.hpp"
 
 /*
  * Cantidad máxima legal de puntos que puede tener un conductor.
