@@ -1,26 +1,23 @@
 ﻿/********************************************************************************\
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Miguel Ángel Latre
- * Última revisión: 21 de noviembre de 2019
+ * Última revisión: 13 de noviembre de 2020
  * Resumen: Soluciones a los problemas de Programación 1 planteados en la clase
  *          de problemas de registros.
- * Codificación de caracteres original de este fichero: UTF-8 con BOM
 \********************************************************************************/
 
-/*
- * Máxima longitud de un nombre completo
- */
-const int MAX_LONG_NOMBRE = 200;
+#include <string>
+using namespace std;
 
 /*
  * Estimación del máximo número de movimientos del historial de puntos
  */
-const int MAX_NUM_MOVIMIENTOS = 200;
+const unsigned int MAX_NUM_MOVIMIENTOS = 200;
 
 /*
  * Tiempo en meses durante el que a un conductor se le considera novel.
  */
-const int MESES_NOVEL = 12;
+const unsigned int MESES_NOVEL = 12;
 
 
 /*
@@ -30,34 +27,34 @@ const int MESES_NOVEL = 12;
  * bonificaciones y sanciones).
  */
 struct Permiso {
-    char nombreCompleto[MAX_LONG_NOMBRE];
-    int antiguedadMeses;
+    string nombreCompleto;
+    unsigned int antiguedadMeses;
     int movimientos[MAX_NUM_MOVIMIENTOS];
-    int numMovimientos;
+    unsigned int numMovimientos;
     // Aquí iría la definición de campos para otra información como
     // DNI, fecha de expedición, tipo de carnet, ...
 };
 
 
 /*
- * Pre:  La cadena «nombre» no tiene más de MAX_LONG_NOMBRE caracteres.
+ * Pre:  ---
  * Post: Ha inicializado el permiso «p» de forma que representa el permiso de
  *       conducir de una persona llamada «nombre» que acaba de obtenerlo.
  */
-void inicializarComoNuevo(Permiso& p, const char nombre[]);
+void inicializarComoNuevo(Permiso& p, const string nombre);
 
 /*
  * Pre:  ---
  * Post: Ha devuelto «true» si y solo si el titular del permiso «p» es un
  *       conductor novel.
  */
-bool esNovel(const Permiso& p);
+bool esNovel(const Permiso p);
 
 /*
  * Pre:  ---
  * Post: Ha devuelto la cantidad de puntos asociados al permiso de conducir «p».
  */
-int puntos(const Permiso& p);
+int puntos(const Permiso p);
 
 
 /*
@@ -65,7 +62,7 @@ int puntos(const Permiso& p);
  * Post: Ha registrado entre los movimientos de puntos del permiso «p» una
  *       sanción de «sancion» puntos.
  */
-void registrarSancion(Permiso& p, const int sancion);
+void registrarSancion(Permiso& p, const unsigned int sancion);
 
 
 /*
@@ -74,4 +71,4 @@ void registrarSancion(Permiso& p, const int sancion);
  *       bonificación de «bonificacion» puntos o inferior, en el caso de que se
  *       sobrepasara la cantidad legal máxima de 15 puntos.
  */
-void registrarBonificacion(Permiso& p, const int bonificacion);
+void registrarBonificacion(Permiso& p, const unsigned int bonificacion);
