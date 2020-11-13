@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "Programación 1",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../../codigo-c++-privado/practica3/calculadora/src/**",
+                "${workspaceFolder}/../practica3/calculadora/src/**"
+            ]
+        }
+    ],
+    "version": 4
+}
