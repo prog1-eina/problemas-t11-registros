@@ -11,7 +11,10 @@
                 "permisos"
             ],
             "problemMatcher": ["$gcc"],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
         },
         {
             "label": "Ejecutar programa «permisos»",
@@ -21,6 +24,29 @@
                 "command": "chcp 65001 ; bin\\permisos.exe",
             },
             "dependsOn": "Compilar programa «permisos»",
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Compilar programa «racionales»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make.exe",
+            },
+            "args": [
+                "racionales"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+        },
+        {
+            "label": "Ejecutar programa «racionales»",
+            "type": "shell",
+            "command": "bin/racionales",
+            "windows": {
+                "command": "chcp 65001 ; bin\\racionales.exe",
+            },
+            "dependsOn": "Compilar programa «racionales»",
             "problemMatcher": ["$gcc"],
         },
     ],
