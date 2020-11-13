@@ -36,7 +36,7 @@ void inicializarComoNuevo(Permiso& p, const string nombre) {
  * Post: Ha devuelto «true» si y solo si el titular del permiso «p» es un
  *       conductor novel.
  */
-bool esNovel(const Permiso p) {
+bool esNovel(const Permiso& p) {
     return p.antiguedadMeses < MESES_NOVEL;
 }
 
@@ -44,7 +44,7 @@ bool esNovel(const Permiso p) {
  * Pre:  ---
  * Post: Ha devuelto la cantidad de puntos asociados al permiso de conducir «p».
  */
-int puntos(const Permiso p) {
+int puntos(const Permiso& p) {
     int resultado = 0;
     for (unsigned int i = 0; i < p.numMovimientos; i++) {
         resultado += p.movimientos[i];
