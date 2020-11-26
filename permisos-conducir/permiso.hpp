@@ -1,10 +1,10 @@
-﻿/********************************************************************************\
+﻿/******************************************************************************\
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Miguel Ángel Latre
  * Última revisión: 13 de noviembre de 2020
  * Resumen: Soluciones a los problemas de Programación 1 planteados en la clase
  *          de problemas de registros.
-\********************************************************************************/
+\******************************************************************************/
 
 #include <string>
 using namespace std;
@@ -23,8 +23,8 @@ const unsigned int MESES_NOVEL = 12;
 /*
  * Los registros de tipo Permiso representan (de forma muy parcial)
  * permisos de conducir por puntos. Únicamente tenemos en cuenta el nombre del
- * conductor, su antigüedad en meses y el historial de puntos (asignación inicial,
- * bonificaciones y sanciones).
+ * conductor, su antigüedad en meses y el historial de puntos (asignación
+ * inicial, bonificaciones y sanciones).
  */
 struct Permiso {
     string nombreCompleto;
