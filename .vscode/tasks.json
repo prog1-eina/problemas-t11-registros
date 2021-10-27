@@ -51,7 +51,7 @@
         },
     ],
     "presentation": {
-        "showReuseMessage": false,
+        "showReuseMessage": true,
         "panel": "shared",
         "reveal": "always",
         "focus": true,
