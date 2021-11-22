@@ -12,12 +12,12 @@ using namespace std;
 /*
  * Estimación del máximo número de movimientos del historial de puntos
  */
-const unsigned int MAX_NUM_MOVIMIENTOS = 200;
+const unsigned MAX_NUM_MOVIMIENTOS = 200;
 
 /*
  * Tiempo en meses durante el que a un conductor se le considera novel.
  */
-const unsigned int MESES_NOVEL = 12;
+const unsigned MESES_NOVEL = 12;
 
 
 /*
@@ -28,9 +28,9 @@ const unsigned int MESES_NOVEL = 12;
  */
 struct Permiso {
     string nombreCompleto;
-    unsigned int antiguedadMeses;
+    unsigned antiguedadMeses;
     int movimientos[MAX_NUM_MOVIMIENTOS];
-    unsigned int numMovimientos;
+    unsigned numMovimientos;
     // Aquí iría la definición de campos para otra información como
     // DNI, fecha de expedición, tipo de carnet, ...
 };
@@ -62,7 +62,7 @@ int puntos(const Permiso& p);
  * Post: Ha registrado entre los movimientos de puntos del permiso «p» una
  *       sanción de «sancion» puntos.
  */
-void registrarSancion(Permiso& p, const unsigned int sancion);
+void registrarSancion(Permiso& p, const unsigned sancion);
 
 
 /*
@@ -71,4 +71,4 @@ void registrarSancion(Permiso& p, const unsigned int sancion);
  *       bonificación de «bonificacion» puntos o inferior, en el caso de que se
  *       sobrepasara la cantidad legal máxima de 15 puntos.
  */
-void registrarBonificacion(Permiso& p, const unsigned int bonificacion);
+void registrarBonificacion(Permiso& p, const unsigned bonificacion);

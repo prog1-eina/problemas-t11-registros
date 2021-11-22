@@ -46,7 +46,7 @@ bool esNovel(const Permiso& p) {
  */
 int puntos(const Permiso& p) {
     int resultado = 0;
-    for (unsigned int i = 0; i < p.numMovimientos; i++) {
+    for (unsigned i = 0; i < p.numMovimientos; i++) {
         resultado += p.movimientos[i];
     }
     return resultado;
@@ -58,7 +58,7 @@ int puntos(const Permiso& p) {
  * Post: Ha registrado entre los movimientos de puntos del permiso «p» una
  *       sanción de «sancion» puntos.
  */
-void registrarSancion(Permiso& p, const unsigned int sancion) {
+void registrarSancion(Permiso& p, const unsigned sancion) {
     if (p.numMovimientos < MAX_NUM_MOVIMIENTOS) {
         p.movimientos[p.numMovimientos] = -sancion;
         p.numMovimientos++;
@@ -72,9 +72,9 @@ void registrarSancion(Permiso& p, const unsigned int sancion) {
  *       bonificación de «bonificacion» puntos o inferior, en el caso de que se
  *       sobrepasara la cantidad legal máxima de 15 puntos.
  */
-void registrarBonificacion(Permiso& p, const unsigned int bonificacion) {
+void registrarBonificacion(Permiso& p, const unsigned bonificacion) {
     if (p.numMovimientos < MAX_NUM_MOVIMIENTOS) {
-        unsigned int puntosARegistrar = bonificacion;
+        unsigned puntosARegistrar = bonificacion;
         int puntosActuales = puntos(p);
         if (puntosActuales + bonificacion > PUNTOS_MAXIMO_LEGAL) {
             puntosARegistrar = PUNTOS_MAXIMO_LEGAL - puntosActuales;

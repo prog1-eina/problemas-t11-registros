@@ -22,7 +22,7 @@ Racional definirRacional(const int numerador, const int denominador) {
     int maximoComunDivisor = mcd(denominador, numerador);
         // Tenemos que declarar la variable «maximoComunDivisor» de tipo «int»
         // para que las divisiones de las dos instrucciones siguientes se hagan
-        // entre enteros con singo. Si la declaramos como «unsigned int», serían
+        // entre enteros con singo. Si la declaramos como «unsigned», serían
         // los valores de «numerador» y «denominador» los que se convertirían
         // implicitamente a enteros sin signo para hacer las divisiones, lo que
         // produciría resultados erróneos en el caso de que uno de los dos tenga

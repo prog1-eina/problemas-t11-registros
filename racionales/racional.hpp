@@ -12,7 +12,7 @@
  */
 struct Racional {
     int numerador;
-    unsigned int denominador;
+    unsigned denominador;
 };
 
 
