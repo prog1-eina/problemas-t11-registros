@@ -39,7 +39,10 @@ struct Permiso {
 /*
  * Pre:  ---
  * Post: Ha inicializado el permiso «p» de forma que representa el permiso de
- *       conducir de una persona llamada «nombre» que acaba de obtenerlo.
+ *       conducir de una persona llamada «nombre» que acaba de obtenerlo, es
+ *       decir, el permiso de esa persona irá a su nombre, tendrá una antigüedad
+ *       de 0 meses y un único movimiento en su historial correspondiente a la
+ *       asignación inicial de 8 puntos.
  */
 void inicializarComoNuevo(Permiso& p, const string nombre);
 
