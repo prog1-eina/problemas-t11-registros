@@ -1,17 +1,31 @@
 ﻿/********************************************************************************\
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 13 de noviembre de 2020
+ * Última revisión: 22 de noviembre de 2021
  * Resumen: Soluciones a los problemas de Programación 1 planteados en la clase
  *          de problemas de registros.
  * Codificación de caracteres original de este fichero: UTF-8 con BOM
 \********************************************************************************/
 
-#include <iostream>
 #include "racional.hpp"
+#include <cstdlib>
+#include <iostream>
 #include "calculos.hpp"
 using namespace std;
 
+/*
+ * Pre:  ---
+ * Post: Devuelve 1 si «n» es mayor o igual que 0 y -1 si «n» es estrictamente
+ *       negativo. 
+ */
+int signo(int n) {
+    if (n >= 0) {
+        return 1;
+    }
+    else {
+        return -1;
+    }
+}
 
 /*
  * Pre:  denominador ≠ 0
@@ -19,24 +33,15 @@ using namespace std;
  *       representante canónico de numerador∕denominador.
  */
 Racional definirRacional(const int numerador, const int denominador) {
-    int maximoComunDivisor = mcd(denominador, numerador);
-        // Tenemos que declarar la variable «maximoComunDivisor» de tipo «int»
-        // para que las divisiones de las dos instrucciones siguientes se hagan
-        // entre enteros con singo. Si la declaramos como «unsigned», serían
-        // los valores de «numerador» y «denominador» los que se convertirían
-        // implicitamente a enteros sin signo para hacer las divisiones, lo que
-        // produciría resultados erróneos en el caso de que uno de los dos tenga
-        // un valor negativo.
-        // https://en.cppreference.com/w/cpp/language/operator_arithmetic#Conversions
-        
-    int numeradorIrreducible = numerador / maximoComunDivisor;
-    int denominadorIrreducible = denominador / maximoComunDivisor;
-    if (denominadorIrreducible >= 0) {
-        return {numeradorIrreducible, unsigned(denominadorIrreducible)};
-    }
-    else {
-        return {-numeradorIrreducible, unsigned(-denominadorIrreducible)};
-    }
+    // Hay que ser extremadamente cuidadosos con las operaciones de
+    // multiplicación y división entre enteros con y sin signo, puesto que las
+    // reglas de conversión implicita de C++ convierten un entero con signo en
+    // entero sin signo cuando se mezclan.
+    int signoRacional = signo(numerador) * signo(denominador);
+    unsigned maximoComunDivisor = mcd(denominador, numerador);
+    int numeradorIrreducible = abs(numerador) / maximoComunDivisor;
+    unsigned denominadorIrreducible = abs(denominador) / maximoComunDivisor;
+    return {signoRacional * numeradorIrreducible, denominadorIrreducible};
 }
 
 

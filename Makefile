@@ -15,9 +15,16 @@ SOURCE_PERMISOS_DIR = permisos-conducir
 #«racionales»
 SOURCE_RACIONALES_DIR = racionales
 
-# Variable que define el directorio donde está el código fuente de la 
-# biblioteca «calculos» de la práctica 3
-SOURCE_CALCULOS_DIR = ../practica3/calculadora/src
+# Variable que define el directorio donde los profesores tenemos el código
+# fuente de la biblioteca «calculos» de la práctica 3 con la solución
+SOURCE_CALCULOS_PROFS_DIR = ../../codigo-c++-privado/practica3/src/calculadora
+
+# Variable que define el directorio donde deberías tener el código fuente de la 
+# biblioteca «calculos» de la práctica 3.
+# ESTRUCTURA TU CÓDIGO PARA QUE EL DIRECTORIO problemas-t11-registros SE
+# ENCUENTRE AL MISMO NIVEL QUE EL DIRECTORIO practica3 O MODIFICA EL VALOR DE
+# ESTA VARIABLE CON LA RUTA CORRESPONDIENTE AL MÓDULO «calculos»
+SOURCE_CALCULOS_DIR = ../practica3/src/calculadora
 
 # Variable que define el directorio en el que crear los ficheros intermedios 
 # de compilación
@@ -32,7 +39,9 @@ BIN_DIR = bin
 # en las reglas. 
 # En este caso, en el directorio de codigo fuente, en el
 # de codigo de pruebas y el de la biblioteca para mostrar resultados de preubas
-VPATH = $(SOURCE_PERMISOS_DIR) $(SOURCE_RACIONALES_DIR) $(SOURCE_CALCULOS_DIR)
+VPATH = $(SOURCE_PERMISOS_DIR) $(SOURCE_RACIONALES_DIR) \
+        $(SOURCE_CALCULOS_PROFS_DIR) $(SOURCE_CALCULOS_DIR)
+        
 
 
 ## COMPILADOR Y OPCIONES DE COMPILACIÓN:
@@ -56,7 +65,7 @@ CXX = g++
 #    -I _dir_:  indica al compilador que, cuando encuentre una cláusula
 #          de inclusión de un fichero, si este no se encuentra en el directorio
 #          actual, busque también en el directorio _dir_.
-CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_CALCULOS_DIR)
+CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_CALCULOS_PROFS_DIR) -I$(SOURCE_CALCULOS_DIR) 
 
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):

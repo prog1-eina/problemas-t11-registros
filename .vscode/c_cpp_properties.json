@@ -4,8 +4,8 @@
             "name": "Programación 1",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/../../codigo-c++-privado/practica3/calculadora/src/**",
-                "${workspaceFolder}/../practica3/calculadora/src/**"
+                "${workspaceFolder}/../../codigo-c++-privado/practica3/src/calculadora/**",
+                "${workspaceFolder}/../practica3/src/calculadora/**"
             ]
         }
     ],

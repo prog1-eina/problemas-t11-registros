@@ -23,7 +23,7 @@
  *       denominado «calculadora/src» dentro de un directorio «practica3» 
  *       ubicado en la misma carpeta que el directorio correspondiente a estas
  *       soluciones («problemas-t11-registros»). La ruta a este módulo puede
- *        modificarse en el propio fichero `Makefile` si fuese preciso.
+ *       modificarse en el propio fichero `Makefile` si fuese preciso.
 \******************************************************************************/
 
 #include <iostream>
