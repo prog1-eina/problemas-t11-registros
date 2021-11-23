@@ -93,10 +93,10 @@ Racional dividir(const Racional a, const Racional b) {
  */
 Racional inverso(const Racional a) {
     if (a.numerador > 0) {
-        return {int(a.denominador), unsigned(a.numerador)};
+        return {a.denominador, a.numerador};
     }
     else {
-        return {int(-a.denominador), unsigned(-a.numerador)};
+        return {-a.denominador, -a.numerador};
     }
 }
 
