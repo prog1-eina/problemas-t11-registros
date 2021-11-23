@@ -8,24 +8,10 @@
 \********************************************************************************/
 
 #include "racional.hpp"
-#include <cstdlib>
 #include <iostream>
 #include "calculos.hpp"
 using namespace std;
 
-/*
- * Pre:  ---
- * Post: Devuelve 1 si «n» es mayor o igual que 0 y -1 si «n» es estrictamente
- *       negativo. 
- */
-int signo(int n) {
-    if (n >= 0) {
-        return 1;
-    }
-    else {
-        return -1;
-    }
-}
 
 /*
  * Pre:  denominador ≠ 0
@@ -37,11 +23,17 @@ Racional definirRacional(const int numerador, const int denominador) {
     // multiplicación y división entre enteros con y sin signo, puesto que las
     // reglas de conversión implicita de C++ convierten un entero con signo en
     // entero sin signo cuando se mezclan.
-    int signoRacional = signo(numerador) * signo(denominador);
-    unsigned maximoComunDivisor = mcd(denominador, numerador);
-    int numeradorIrreducible = abs(numerador) / maximoComunDivisor;
-    unsigned denominadorIrreducible = abs(denominador) / maximoComunDivisor;
-    return {signoRacional * numeradorIrreducible, denominadorIrreducible};
+    // Por eso se han declarado los campos del tipo registro «Racional» como
+    // «int» en ambos casos y por eso se declara la variable
+    // «maximoComunDivisor» de esta función también como «int».
+    int maximoComunDivisor = mcd(denominador, numerador);
+    Racional resultado = {numerador / maximoComunDivisor,
+                          denominador / maximoComunDivisor};
+    if (resultado.denominador < 0) {
+        resultado.numerador = -resultado.numerador;
+        resultado.denominador = -resultado.denominador;
+    }
+    return resultado;
 }
 
 
