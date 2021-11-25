@@ -69,7 +69,7 @@ void registrarSancion(Permiso& p, const unsigned sancion);
 
 
 /*
- * Pre:  puntos > 0
+ * Pre:  bonificacion > 0
  * Post: Ha registrado entre los movimientos de puntos del permiso «p» una
  *       bonificación de «bonificacion» puntos o inferior, en el caso de que se
  *       sobrepasara la cantidad legal máxima de 15 puntos.
