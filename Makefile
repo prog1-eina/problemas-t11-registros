@@ -83,10 +83,10 @@ OBJECTS_RACIONALES = $(addprefix $(BUILD_DIR)/, racional.o racional-main.o \
 ## Reglas del fichero «Makefile»
 
 permisos: $(OBJECTS_PERMISOS) | $(BIN_DIR)
-	$(CXX) -o $(BIN_DIR)/$@ -g $(OBJECTS_PERMISOS) -static
+	$(CXX) -o $(BIN_DIR)/$@ -g $^ -static
 
 racionales: $(OBJECTS_RACIONALES) | $(BIN_DIR)
-	$(CXX) -o $(BIN_DIR)/$@ -g $(OBJECTS_RACIONALES) -static
+	$(CXX) -o $(BIN_DIR)/$@ -g $^ -static
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@  
