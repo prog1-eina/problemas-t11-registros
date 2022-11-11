@@ -18,7 +18,7 @@ struct Racional {
 
 /*
  * Pre:  denominador ≠ 0
- * Post: Ha devuelto un registro de tipo «Racional» cuyo valor es el 
+ * Post: Devuelve un registro de tipo «Racional» cuyo valor es el 
  *       representante canónico de numerador∕denominador.
  */
 Racional definirRacional(const int numerador, const int denominador);
@@ -62,18 +62,18 @@ Racional inverso(const Racional a);
 
 /*
  * Pre:  «a» es un racional válido (a.denominador ≠ 0).
- * Post: Ha devuelto el valor real de «a»
+ * Post: Devuelve el valor real de «a»
  */
 double valorReal(const Racional a);
 
 /*
  * Pre:  «a» es un racional válido (a.denominador ≠ 0).
- * Post: Ha escrito el racional «a» en la pantalla.
+ * Post: Escribe el racional «a» en la pantalla.
  */
 void escribir(const Racional a);
 
 /*
  * Pre:  «a» y «b» son racionales válidos (a.denominador ≠ 0 y b.denominador ≠ 0).
- * Post: Ha devuelto true si y solo si los racionales «a» y «b» son iguales.
+ * Post: Devuelve true si y solo si los racionales «a» y «b» son iguales.
  */
 bool sonIguales(const Racional a, const Racional b);

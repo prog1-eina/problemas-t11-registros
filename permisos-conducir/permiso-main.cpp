@@ -26,7 +26,7 @@ using namespace std;
 
 /*
  * Pre:  ---
- * Post: Ha escrito el nombre del titular de «permiso», sus puntos y si es novel
+ * Post: Escribe el nombre del titular de «permiso», sus puntos y si es novel
  *       o no.
  */
 void mostrar(const Permiso permiso) {
@@ -39,8 +39,15 @@ void mostrar(const Permiso permiso) {
 }
 
 /*
- * Pre:  ---
- * Post: Ha utilizado las funciones definidas en el módulo «permiso».
+ * Programa de prueba que utiliza las funciones definidas en el módulo «permiso»:
+ *
+ * A Juan González González le expidieron su permiso como conductor novel en
+ * enero del año 2000 con 8 puntos. En 2002 fue bonificado con 4 puntos; 
+ * en 2005, con 2 puntos más. En enero 2008 fue bonificado de nuevo con 1 punto
+ * y, 7 meses después, sancionado con 6 puntos.
+ * 
+ * El programa va reflejando estos hechos en una variable de tipo «Permiso», con la
+ * que se van invocando a funciones y procedimientos del módulo «permiso».
  */
 int main() {
     cout << "Se saca el carnet: ";

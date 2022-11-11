@@ -28,12 +28,12 @@
 
 #include <iostream>
 #include "racional.hpp"
+using namespace std;
 
 /*
- * Pre:  ---
- * Post: Ha comprobado el funcionamiento del módulo «racional», escribiendo en la
- *       pantalla el racional 9/8 resultante de realizar la operación
- *       [(2/4 + 1/6) - 8/3] * [6/8 ÷ 4/(-3)].
+ * Programa de pruebas del módulo «racional», que escribe en la pantalla el
+ * racional 9/8 resultante de realizar la operación
+ * [(2/4 + 1/6) - 8/3] * [6/8 ÷ 4/(-3)].
  */
 int main() {
     Racional p1 = definirRacional(2, 4);  //  2/4
@@ -46,7 +46,7 @@ int main() {
     Racional q2 = restar(q1, p3);       //  (2/4 + 1/6) - 8/3
     Racional q3 = dividir(p4, p5);      //  6/8 ÷ 4/(-3)
     Racional r = multiplicar(q2, q3);   //  [(2/4 + 1/6) - 8/3] * [6/8 ÷ 4/(-3)]
-    escribir(r);
+    escribir(r); cout << endl;
 
     return 0;
 }

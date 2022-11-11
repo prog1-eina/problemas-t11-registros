@@ -1,7 +1,7 @@
 ﻿/******************************************************************************\
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Miguel Ángel Latre
- * Última revisión: 13 de noviembre de 2020
+ * Última revisión: 11 de noviembre de 2022
  * Resumen: Soluciones a los problemas de Programación 1 planteados en la clase
  *          de problemas de registros.
 \******************************************************************************/
@@ -38,7 +38,7 @@ struct Permiso {
 
 /*
  * Pre:  ---
- * Post: Ha inicializado el permiso «p» de forma que representa el permiso de
+ * Post: Inicializa el permiso «p» de forma que representa el permiso de
  *       conducir de una persona llamada «nombre» que acaba de obtenerlo, es
  *       decir, el permiso de esa persona irá a su nombre, tendrá una antigüedad
  *       de 0 meses y un único movimiento en su historial correspondiente a la
@@ -48,30 +48,29 @@ void inicializarComoNuevo(Permiso& p, const string nombre);
 
 /*
  * Pre:  ---
- * Post: Ha devuelto «true» si y solo si el titular del permiso «p» es un
+ * Post: Devuelve «true» si y solo si el titular del permiso «p» es un
  *       conductor novel.
  */
 bool esNovel(const Permiso& p);
 
 /*
  * Pre:  ---
- * Post: Ha devuelto la cantidad de puntos asociados al permiso de conducir «p».
+ * Post: Devuelve la cantidad de puntos asociados al permiso de conducir «p».
  */
 int puntos(const Permiso& p);
 
 
 /*
- * Pre:  0 < sancion <= 6
- * Post: Ha registrado entre los movimientos de puntos del permiso «p» una
- *       sanción de «sancion» puntos.
+ * Pre:  0 < sancion ≤ 6
+ * Post: Registra en el historial de puntos del permiso «p» una sanción de «sancion»
+ *       puntos.
  */
 void registrarSancion(Permiso& p, const unsigned sancion);
 
 
 /*
  * Pre:  bonificacion > 0
- * Post: Ha registrado entre los movimientos de puntos del permiso «p» una
- *       bonificación de «bonificacion» puntos o inferior, en el caso de que se
- *       sobrepasara la cantidad legal máxima de 15 puntos.
+ * Post: Registra en el historial de puntos del permiso «p» una bonificación de
+ *       «bonificacion» puntos, sin sobrepasar la cantidad legal máxima de 15 puntos.
  */
 void registrarBonificacion(Permiso& p, const unsigned bonificacion);
