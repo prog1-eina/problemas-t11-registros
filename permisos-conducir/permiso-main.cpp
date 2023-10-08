@@ -8,9 +8,7 @@
  * Nota: El código de esta versión está repartido en varios módulos. Para
  *       compilarlo, hay que ejecutar el comando
  *           make permisos
- *       o, en Windows,
- *           mingw32-make permisos
- *       o ejecutar la tarea "Compilar programa «permisos»" de VSC.
+  *       o ejecutar la tarea "Compilar programa «permisos»" de VSC.
  * 
  *       Para ejecutarlo, una vez compilado, hay que ejecutar el comando
  *           ./permisos

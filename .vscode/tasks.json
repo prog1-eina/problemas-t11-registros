@@ -10,9 +10,6 @@
             "label": "Compilar programa «permisos»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "permisos"
             ],
@@ -36,9 +33,6 @@
             "label": "Compilar programa «racionales»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "racionales"
             ],
@@ -59,9 +53,6 @@
             "label": "Limpiar resultados de compilación",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "clean"
             ],
