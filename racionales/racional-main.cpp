@@ -7,7 +7,7 @@
  * Nota: El código de este programa está repartido en varios módulos. 
  *       Para compilarlo, hay que ejecutar el comando
  *           make racionales
-  *       o ejecutar la tarea "Compilar programa «racionales»" de VSC.
+ *       o ejecutar la tarea "Compilar programa «racionales»" de VSC.
  * 
  *       Para ejecutarlo, una vez compilado, hay que ejecutar el comando
  *           ./racionales
