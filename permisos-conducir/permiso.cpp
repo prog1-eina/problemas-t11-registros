@@ -73,7 +73,8 @@ void registrarSancion(Permiso& p, const unsigned sancion) {
  * Pre:  bonificacion > 0
  * Post: Registra en el historial de puntos del permiso «p» una bonificación de
  *       «bonificacion» puntos, sin sobrepasar la cantidad legal máxima de 15 puntos.
- */void registrarBonificacion(Permiso& p, const unsigned bonificacion) {
+ */
+void registrarBonificacion(Permiso& p, const unsigned bonificacion) {
     if (p.numMovimientos < MAX_NUM_MOVIMIENTOS) {
         unsigned puntosARegistrar = bonificacion;
         int puntosActuales = puntos(p);
