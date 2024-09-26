@@ -44,20 +44,20 @@ struct Permiso {
  *       de 0 meses y un único movimiento en su historial correspondiente a la
  *       asignación inicial de 8 puntos.
  */
-void inicializarComoNuevo(Permiso& p, const string nombre);
+void inicializarComoNuevo(Permiso &p, const string nombre);
 
 /*
  * Pre:  ---
  * Post: Devuelve «true» si y solo si el titular del permiso «p» es un
  *       conductor novel.
  */
-bool esNovel(const Permiso& p);
+bool esNovel(const Permiso &p);
 
 /*
  * Pre:  ---
  * Post: Devuelve la cantidad de puntos asociados al permiso de conducir «p».
  */
-int puntos(const Permiso& p);
+int puntos(const Permiso &p);
 
 
 /*
@@ -65,7 +65,7 @@ int puntos(const Permiso& p);
  * Post: Registra en el historial de puntos del permiso «p» una sanción de «sancion»
  *       puntos.
  */
-void registrarSancion(Permiso& p, const unsigned sancion);
+void registrarSancion(Permiso &p, const unsigned sancion);
 
 
 /*
@@ -73,4 +73,4 @@ void registrarSancion(Permiso& p, const unsigned sancion);
  * Post: Registra en el historial de puntos del permiso «p» una bonificación de
  *       «bonificacion» puntos, sin sobrepasar la cantidad legal máxima de 15 puntos.
  */
-void registrarBonificacion(Permiso& p, const unsigned bonificacion);
+void registrarBonificacion(Permiso &p, const unsigned bonificacion);
