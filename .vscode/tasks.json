@@ -24,7 +24,8 @@
             "type": "shell",
             "command": "bin/permisos",
             "windows": {
-                "command": "chcp 65001 ; bin\\permisos.exe",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && bin\\permisos.exe"]
             },
             "dependsOn": "Compilar programa «permisos»",
             "problemMatcher": ["$gcc"],
@@ -44,7 +45,8 @@
             "type": "shell",
             "command": "bin/racionales",
             "windows": {
-                "command": "chcp 65001 ; bin\\racionales.exe",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && bin\\racionales.exe"]
             },
             "dependsOn": "Compilar programa «racionales»",
             "problemMatcher": ["$gcc"],
