@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Miguel Ángel Latre
  * Última revisión: 13 de noviembre de 2020
@@ -15,7 +15,7 @@
  *       o, en Windows,
  *           .\permisos.exe
  *       o ejecutar la tarea "Ejecutar programa «permisos»" de VSC.
-\******************************************************************************/
+ *****************************************************************************/
 
 #include <iostream>
 #include "permiso.hpp"
@@ -37,15 +37,17 @@ void mostrar(const Permiso permiso) {
 }
 
 /*
- * Programa de prueba que utiliza las funciones definidas en el módulo «permiso»:
+ * Programa de prueba que utiliza las funciones definidas en el módulo
+ * «permiso»:
  *
  * A Juan González González le expidieron su permiso como conductor novel en
  * enero del año 2000 con 8 puntos. En 2002 fue bonificado con 4 puntos; 
  * en 2005, con 2 puntos más. En enero 2008 fue bonificado de nuevo con 1 punto
  * y, 7 meses después, sancionado con 6 puntos.
  * 
- * El programa va reflejando estos hechos en una variable de tipo «Permiso», con la
- * que se van invocando a funciones y procedimientos del módulo «permiso».
+ * El programa va reflejando estos hechos en una variable de tipo «Permiso»,
+ * con la que se van invocando a funciones y procedimientos del módulo
+ * «permiso».
  */
 int main() {
     cout << "Se saca el carnet: ";
