@@ -1,7 +1,6 @@
 ﻿/******************************************************************************
  * Curso de Programación 1. Tema 11 (Registros)
  * Autores: Miguel Ángel Latre
- * Última revisión: 11 de noviembre de 2022
  * Resumen: Soluciones a los problemas de Programación 1 planteados en la clase
  *          de problemas de registros.
  *****************************************************************************/
