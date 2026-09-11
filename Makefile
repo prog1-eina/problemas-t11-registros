@@ -53,7 +53,7 @@ CXX = g++
 # Variable preestablecida de «make» que en la que se puede definir las opciones
 # con las que debe invocarse al compilador.
 # En este caso, son las siguientes:
-#    -Og:   indica al compilador que incluya información de depuración al generar
+#    -g:   indica al compilador que incluya información de depuración al generar
 #          los ejecutables o los ficheros intermedios de compilación. Esta 
 #          información es necesaria si luego se quiere utilizar el depurador.
 #    -Wall:  indica al compilador que informe de todos los 
@@ -65,7 +65,7 @@ CXX = g++
 #    -I _dir_:  indica al compilador que, cuando encuentre una cláusula
 #          de inclusión de un fichero, si este no se encuentra en el directorio
 #          actual, busque también en el directorio _dir_.
-CXXFLAGS = -Og -Wall -Wextra -I$(SOURCE_CALCULOS_PROFS_DIR) -I$(SOURCE_CALCULOS_DIR) 
+CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_CALCULOS_PROFS_DIR) -I$(SOURCE_CALCULOS_DIR) 
 
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):
@@ -83,10 +83,10 @@ OBJECTS_RACIONALES = $(addprefix $(BUILD_DIR)/, racional.o racional-main.o \
 ## Reglas del fichero «Makefile»
 
 permisos: $(OBJECTS_PERMISOS) | $(BIN_DIR)
-	$(CXX) -o $(BIN_DIR)/$@ -Og $^
+	$(CXX) -o $(BIN_DIR)/$@ -g $^
 
 racionales: $(OBJECTS_RACIONALES) | $(BIN_DIR)
-	$(CXX) -o $(BIN_DIR)/$@ -Og $^
+	$(CXX) -o $(BIN_DIR)/$@ -g $^
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@  
