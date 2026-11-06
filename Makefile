@@ -1,8 +1,8 @@
-################################################################################
+###############################################################################
 ## Fichero «Makefile» para el programa «permisos» y el programa «racionales»
-################################################################################
+###############################################################################
 
-################################################################################
+###############################################################################
 ## Declaracion de variables del fichero «Makefile»
 
 ## DIRECTORIOS
@@ -17,7 +17,7 @@ SOURCE_RACIONALES_DIR = racionales
 
 # Variable que define el directorio donde los profesores tenemos el código
 # fuente de la biblioteca «calculos» de la práctica 3 con la solución
-SOURCE_CALCULOS_PROFS_DIR = ../../codigo-c++-privado/practica3/src/calculadora
+SOURCE_CALCULOS_PROFS_DIR = ../../unizar-prog1-privado/practica3/src/calculadora
 
 # Variable que define el directorio donde deberías tener el código fuente de la 
 # biblioteca «calculos» de la práctica 3.
