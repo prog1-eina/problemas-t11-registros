@@ -9,9 +9,7 @@
  *       o ejecutar la tarea "Compilar programa «racionales»" de VSC.
  * 
  *       Para ejecutarlo, una vez compilado, hay que ejecutar el comando
- *           ./racionales
- *       o, en Windows,
- *           .\racionales.exe
+ *           bin/racionales
  *       o ejecutar la tarea "Ejecutar programa «racionales»" de VSC.
  *       
  *       Este programa necesita del módulo `calculos` de la práctica 3 para

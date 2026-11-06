@@ -10,9 +10,7 @@
   *       o ejecutar la tarea "Compilar programa «permisos»" de VSC.
  * 
  *       Para ejecutarlo, una vez compilado, hay que ejecutar el comando
- *           ./permisos
- *       o, en Windows,
- *           .\permisos.exe
+ *           bin/permisos
  *       o ejecutar la tarea "Ejecutar programa «permisos»" de VSC.
  *****************************************************************************/
 
