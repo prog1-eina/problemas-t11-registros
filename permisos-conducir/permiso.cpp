@@ -32,7 +32,6 @@ void inicializarComoNuevo(Permiso &p, const string nombre) {
     p.numMovimientos = 1;
 }
 
-
 /*
  * Pre:  ---
  * Post: Devuelve «true» si y solo si el titular del permiso «p» es un
@@ -54,7 +53,6 @@ int puntos(const Permiso &p) {
     return resultado;
 }
 
-
 /*
  * Pre:  0 < sancion ≤ 6
  * Post: Registra en el historial de puntos del permiso «p» una sanción de
@@ -66,7 +64,6 @@ void registrarSancion(Permiso &p, const unsigned sancion) {
         p.numMovimientos++;
     }
 }
-
 
 /*
  * Pre:  bonificacion > 0

@@ -18,7 +18,6 @@ const unsigned MAX_NUM_MOVIMIENTOS = 200;
  */
 const unsigned MESES_NOVEL = 12;
 
-
 /*
  * Los registros de tipo Permiso representan (de forma muy parcial)
  * permisos de conducir por puntos. Únicamente tenemos en cuenta el nombre del
@@ -33,7 +32,6 @@ struct Permiso {
     // Aquí iría la definición de campos para otra información como
     // DNI, fecha de expedición, tipo de carnet, ...
 };
-
 
 /*
  * Pre:  ---
@@ -58,14 +56,12 @@ bool esNovel(const Permiso &p);
  */
 int puntos(const Permiso &p);
 
-
 /*
  * Pre:  0 < sancion ≤ 6
  * Post: Registra en el historial de puntos del permiso «p» una sanción de
  *       «sancion» puntos.
  */
 void registrarSancion(Permiso &p, const unsigned sancion);
-
 
 /*
  * Pre:  bonificacion > 0

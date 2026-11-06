@@ -18,7 +18,6 @@
 #include "permiso.hpp"
 using namespace std;
 
-
 /*
  * Pre:  ---
  * Post: Escribe el nombre del titular de «permiso», sus puntos y si es novel

@@ -11,7 +11,6 @@
 #include "calculos.hpp"
 using namespace std;
 
-
 /*
  * Pre:  denominador ≠ 0
  * Post: Devuelve un registro de tipo «Racional» cuyo valor es el 
@@ -35,7 +34,6 @@ Racional definirRacional(const int numerador, const int denominador) {
     return resultado;
 }
 
-
 /*
  * Pre:  «a» y «b» son racionales válidos
          (a.denominador ≠ 0 y b.denominador ≠ 0).
@@ -48,7 +46,6 @@ Racional sumar(const Racional a, const Racional b) {
     return definirRacional(numeradorSuma, denominadorComun);
 }
 
-
 /*
  * Pre:  «a» y «b» son racionales válidos
          (a.denominador ≠ 0 y b.denominador ≠ 0).
@@ -58,7 +55,6 @@ Racional restar(const Racional a, const Racional b) {
     return sumar(a, opuesto(b));
 }
 
-
 /*
  * Pre:  «a» es un racional válido (a.denominador ≠ 0).
  * Post: Devuelve el representante canónico de −a.
@@ -66,7 +62,6 @@ Racional restar(const Racional a, const Racional b) {
 Racional opuesto(const Racional a) {
     return definirRacional(-a.numerador, a.denominador);
 }
-
 
 /*
  * Pre:  «a» y «b» son racionales válidos
@@ -78,7 +73,6 @@ Racional multiplicar(const Racional a, const Racional b) {
                            a.denominador * b.denominador);
 }
 
-
 /*
  * Pre:  «a» y «b» son racionales válidos (a.denominador ≠ 0 y
          b.denominador ≠ 0) y b ≠ 0.
@@ -88,7 +82,6 @@ Racional dividir(const Racional a, const Racional b) {
     return multiplicar(a, inverso(b));
 }
 
-
 /*
  * Pre:  «a» es un racional válido (a.denominador ≠ 0) y a ≠ 0
  * Post: Devuelve el representante canónico de 1∕a
@@ -96,7 +89,6 @@ Racional dividir(const Racional a, const Racional b) {
 Racional inverso(const Racional a) {
     return definirRacional(a.denominador, a.numerador);
 }
-
 
 /*
  * Pre:  «a» es un racional válido (a.denominador ≠ 0).
@@ -106,7 +98,6 @@ double valorReal(const Racional a) {
     return double(a.numerador) / double(a.denominador);
 }
 
-
 /*
  * Pre:  «a» es un racional válido (a.denominador ≠ 0).
  * Post: Escribe el racional «a» en la pantalla.
@@ -114,7 +105,6 @@ double valorReal(const Racional a) {
 void escribir(const Racional a) {
     cout << a.numerador << "/" << a.denominador;
 }
-
 
 /*
  * Pre:  «a» y «b» son racionales válidos

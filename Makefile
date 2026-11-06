@@ -43,7 +43,6 @@ VPATH = $(SOURCE_PERMISOS_DIR) $(SOURCE_RACIONALES_DIR) \
         $(SOURCE_CALCULOS_PROFS_DIR) $(SOURCE_CALCULOS_DIR)
         
 
-
 ## COMPILADOR Y OPCIONES DE COMPILACIÓN:
 
 # Variable preestablecida de «make» que en la que se puede definir el nombre del
@@ -66,7 +65,6 @@ CXX = g++
 #          de inclusión de un fichero, si este no se encuentra en el directorio
 #          actual, busque también en el directorio _dir_.
 CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_CALCULOS_PROFS_DIR) -I$(SOURCE_CALCULOS_DIR) 
-
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):
 
