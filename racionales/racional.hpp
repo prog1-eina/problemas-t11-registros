@@ -5,7 +5,6 @@
  *          de problemas de registros.
  *****************************************************************************/
 
-
 /*
  * Representación de números racionales.
  */
@@ -13,7 +12,6 @@ struct Racional {
     int numerador;
     int denominador;
 };
-
 
 /*
  * Pre:  denominador ≠ 0
